@@ -10,14 +10,19 @@
     cursor: pointer;
 }
 
+.outer_header{
+  display: flex;
+  justify-content: center;
+}
+
    .header{
     position: absolute;
-    top: 20px;
+    top: 40px;
     // left: 100px;
     display: flex;
     justify-content: space-between;
-    width: 1310px;
-    margin: 0 100px;
+    width: 85vw;
+    // margin: 0 100px;
    }
 
    .menu_icon{

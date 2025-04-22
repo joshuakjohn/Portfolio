@@ -1,22 +1,34 @@
 <div class="total_view_port" [class.shifted]="isShifted">
     <div class="left_viewport">
-        <div class="welcome" *ngIf="know_less && !isShifted" @fadeInOut>
-            <h2 id="hey">Hey Buddy,</h2>
-            <div class="name">
-                <h1 id="im">I'm</h1>
-                <h1 id="name">Josh</h1>
+        <div class="wrapper" *ngIf="know_less && !isShifted" @fadeInOut>
+            <div class="welandicon">
+                <div class="welcome">
+                    <h2 id="hey">Hey Buddy,</h2>
+                    <div class="name">
+                        <h1 id="im">I'm</h1>
+                        <h1 id="name">Josh</h1>
+                    </div>
+                    <h2 id="message">An Application Software Developer</h2>
+                    <button class="know_more_button" (click)="know_more_click()">About me</button>
+                </div>
+                
+                <div class="link_icons">
+                    <a href="https://www.github.com/joshuakjohn" target="_blank"><mat-icon svgIcon="github" class="svg_link"></mat-icon></a>
+                    <a href="https://www.linkedin.com/in/joshuakjohn" target="_blank"><mat-icon svgIcon="linkedin" class="svg_link"></mat-icon></a>
+                    <a href="https://www.instagram.com/joshua_k_john" target="_blank"><mat-icon svgIcon="instagram" class="svg_link"></mat-icon></a>
+                </div>
             </div>
-            <h2 id="message">An Application Software Developer</h2>
-            <button class="know_more_button" (click)="know_more_click()">About me</button>
-            <div class="link_icons">
-                <a href="https://www.github.com/joshuakjohn" target="_blank"><mat-icon svgIcon="github" class="svg_link"></mat-icon></a>
-                <a href="https://www.linkedin.com/in/joshuakjohn" target="_blank"><mat-icon svgIcon="linkedin" class="svg_link"></mat-icon></a>
-                <a href="https://www.instagram.com/joshua_k_john" target="_blank"><mat-icon svgIcon="instagram" class="svg_link"></mat-icon></a>
-            </div>
+            
         </div>
-        <button *ngIf="know_less" class="right-arrow" (click)="right_arrow_action()" [class.left_arrow]="isShifted" @fadeInOut>
-            <mat-icon svgIcon="right-arrow"></mat-icon>
-        </button>
+        <div class="right-arrow-div">
+            <div>
+
+            </div>
+            <button *ngIf="know_less" class="right-arrow" (click)="right_arrow_action()" [class.left_arrow]="isShifted" @fadeInOut>
+                <mat-icon svgIcon="right-arrow"></mat-icon>
+            </button>
+        </div>
+        
 
         <div class="know_more">
             <div class="profile" [class.grow]="know_more"></div>

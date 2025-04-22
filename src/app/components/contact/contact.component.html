@@ -3,7 +3,7 @@
         <img src="../../../assets/giphy.gif" alt="">
     </div>
     <form class="mail" [formGroup]="form" (submit)="sendMail()">
-        <div>
+        <div class="fullname">
             <p>Full Name</p>
             <input type="text" formControlName="from_name">
             <div *ngIf="form.get('from_name')?.touched && form.get('from_name')?.invalid" class="error">
@@ -11,16 +11,16 @@
             </div>
         </div>
         
-        <div>
+        <div class="fullname">
             <p>E-mail</p>
             <input type="email" formControlName="from_email">
             <div *ngIf="form.get('from_email')?.touched && form.get('from_email')?.invalid" class="error">
                 <span *ngIf="form.get('from_email')?.errors?.['required']">*Email is required.</span>
-                <span *ngIf="form.get('from_email')?.errors?.['pattern']">*Enter a valid email address.</span>
+                <span *ngIf="form.get('from_email')?.errors?.['email']">*Enter a valid email address.</span>
             </div>
         </div>
         
-        <div>
+        <div class="message">
             <p>Message</p>
             <textarea name="message" id="" formControlName="message"></textarea>
             <div *ngIf="form.get('message')?.touched && form.get('message')?.invalid" class="error">

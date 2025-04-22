@@ -1,8 +1,21 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.welandicon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85vw;
+}
+
 .welcome{
     display: flex;
     flex-direction: column;
     color: #ffffff;
-    margin-left: 100px;
+    // margin-left: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -24,7 +37,7 @@
     -webkit-text-stroke-width: 3px;
     -webkit-text-fill-color: #0c0c14;
     background-clip: text;
-    background-image: linear-gradient(to right, #ede8f5, #0800ff);
+    background-image: linear-gradient(to right, #ede8f5, #968ff9);
 }
 
 .name{
@@ -42,7 +55,7 @@
 
 .right-arrow{
     position: absolute;
-    left: 1350px;
+    left: 88vw;
     top: 580px;
     background-color: transparent;
     border: none;
@@ -69,7 +82,7 @@
 
 .left_arrow{
     transform: rotate(-180deg);
-    left: 1650px;
+    left: 55%;
     top: 580px;
     background-color: transparent;
     border: none;
@@ -107,7 +120,7 @@
     all: unset;
     position: absolute;
     top: 490px;
-    left: 100px;
+    left: 7.5vw;
     height: 40px;
     width: 130px;
     text-align: center;
@@ -129,7 +142,7 @@
     z-index: -1;
     position: absolute;
     top: 490px;
-    left: 100px;
+    left: 7.5vw;
     height: 40px;
     width: 130px;
     border: 1px solid;
@@ -183,16 +196,17 @@
     }
 
     color: white;
-    margin-left: 30%;
+    margin-left: 35vw;
 }
 
 .link_icons{
-    position: absolute;
+    // position: absolute;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    top: 240px;
-    left: 1360px;
+    margin: 25px;
+    // top: 240px;
+    // left: 1360px;
     // margin-top: 130px;
     // margin-left: 7px;
 }
@@ -207,4 +221,3 @@
 .svg_link:hover {
     color: #968ff9;
   }
-
