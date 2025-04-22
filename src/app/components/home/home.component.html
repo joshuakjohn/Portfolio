@@ -1,0 +1,23 @@
+<div class="header">
+    <h1 id="logo">JOSH</h1>
+    <div class="menu_icon">
+        <label for="check">
+            <input type="checkbox" id="check" (click)="menu_click()"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <div class="links_circle" [class.grow]="menu">
+        <div class="links" [class.grow]="menu">
+            <p (click)="navigate('home')" class="link">Home</p>
+            <p class="link">Education</p>
+            <p (click)="navigate('contact')" class="link">Contact</p>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

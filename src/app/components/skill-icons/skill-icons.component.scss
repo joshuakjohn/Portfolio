@@ -1,0 +1,43 @@
+.skill-circle{
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.outer-circle{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+svg{
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+circle{
+    fill: none;
+    stroke-width: 10;
+    // stroke-linecap: round;
+}
+
+circle:nth-child(1){
+    stroke: #25243e;
+}
+
+circle:nth-child(2){
+    stroke: #968ff9;
+    stroke-dasharray: 282.6;
+    stroke-dashoffset: 282.6;
+    transition: stroke-dashoffset .5s ease-in-out;
+}
+
+.icon{
+    height: 24px;
+    position: absolute;
+    top: 56%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    scale: 1.5;
+}

@@ -1,0 +1,210 @@
+.welcome{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    margin-left: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#hey{
+    font-size: 20px;
+    margin: 0;
+}
+
+#im{
+    font-size: 150px;
+    margin: 0;
+}
+
+#name{
+    width: 100%;
+    font-size: 150px;
+    margin: 0;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-fill-color: #0c0c14;
+    background-clip: text;
+    background-image: linear-gradient(to right, #ede8f5, #0800ff);
+}
+
+.name{
+    display: flex;
+    gap: 40px;
+}
+
+#message{
+    font-size: 30px;
+}
+
+#skills{
+    font-size: 50px;
+}
+
+.right-arrow{
+    position: absolute;
+    left: 1350px;
+    top: 580px;
+    background-color: transparent;
+    border: none;
+    scale: 2;
+    transition: .5s;
+}
+
+.right-arrow:active{
+    transition: .5s;
+    scale: 1.5;
+}
+
+.total_view_port{
+    display: flex;
+    justify-content: space-between;
+    width: 200vw;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+.shifted {
+    transform: translateX(-100vw);
+  }
+
+.left_arrow{
+    transform: rotate(-180deg);
+    left: 1650px;
+    top: 580px;
+    background-color: transparent;
+    border: none;
+    scale: 2;
+}
+
+.right_viewport{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    color: white;
+    margin-top: 140px;
+}
+
+.left_viewport{
+    width: 50%;
+    height: 100%;
+    margin-top: 170px;
+}
+
+.right_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.know_more_button{
+    all: unset;
+    position: absolute;
+    top: 490px;
+    left: 100px;
+    height: 40px;
+    width: 130px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid;
+    border-radius: 50px;
+    border-color: #968ff9;
+    color: white;
+    background-color: transparent;
+    transition: 1s;
+}
+
+.know_more_button:hover{
+    transition: 1s;
+    background-color: #29274b;
+}
+
+.profile{
+    z-index: -1;
+    position: absolute;
+    top: 490px;
+    left: 100px;
+    height: 40px;
+    width: 130px;
+    border: 1px solid;
+    border-radius: 50px;
+    border-color: #968ff9;
+    // color: white;
+    // background-color: transparent;
+    transition: .3s;
+}
+
+.profile.grow{
+    top: 150px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #968ff9;
+}
+
+.inner {
+    position: absolute;
+    top: 155.5px;
+    left: 55.5px;
+    width: 290px;
+    height: 290px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-image: url("../../../assets/josh_img.png");
+    background-size: cover;
+  }
+
+#about{
+    margin: 20px 170px 20px 0px;
+    line-height: 30px;
+}
+
+#left_icon{
+    transform: rotate(180deg);
+    scale: 2;
+    position: absolute;
+    top: 550px;
+    left: 190px;
+}
+
+.info{
+
+    h1{
+        font-size: 60px;
+        color: #968ff9;
+        margin-top: 0;
+    }
+
+    color: white;
+    margin-left: 30%;
+}
+
+.link_icons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    top: 240px;
+    left: 1360px;
+    // margin-top: 130px;
+    // margin-left: 7px;
+}
+
+.svg_link{
+    scale: 1.5;
+    color: white;
+    transition: .2s;
+}
+
+
+.svg_link:hover {
+    color: #968ff9;
+  }
+
