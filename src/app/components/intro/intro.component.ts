@@ -9,15 +9,27 @@ import { ANGULAR, EXPRESS, GITHUB, INSTAGRAM, JAVASCRIPT, LINKEDIN, MONGODB, NOD
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss'],
   animations: [
-      trigger('fadeInOut', [
-        transition(':enter', [
-          style({ opacity: 0 }),
-          animate('300ms ease-in', style({ opacity: 1 }))
-        ]),
-        transition(':leave', [
-          animate('300ms ease-out', style({ opacity: 0 }))
-        ])
+    trigger('combinedAnimation', [
+      // Fade In
+      transition('void => fade', [
+        style({ opacity: 0 }),
+        animate('300ms ease-in', style({ opacity: 1 }))
       ]),
+      // Fade Out
+      transition('fade => void', [
+        animate('300ms ease-out', style({ opacity: 0 }))
+      ]),
+  
+      // Slide Left In
+      transition('void => slide', [
+        style({ transform: 'translateX(-100vw)', opacity: 0 }),
+        animate('500ms ease-in-out', style({ transform: 'translateX(0)', opacity: 1 }))
+      ]),
+      // Slide Left Out
+      transition('slide => void', [
+        animate('500ms ease-in-out', style({ transform: 'translateX(-200vw)', opacity: 0 }))
+      ])
+    ]),
       trigger('slideInOut', [
         transition(':enter', [
           style({transform: 'translateX(-20px) rotate(180deg)', opacity: 0, }),
@@ -33,14 +45,27 @@ import { ANGULAR, EXPRESS, GITHUB, INSTAGRAM, JAVASCRIPT, LINKEDIN, MONGODB, NOD
       ]),
       trigger('slideRightInOut', [
         transition(':enter', [
-          style({transform: 'translateX(200px)', opacity: 0, }),
-          animate('300ms ease-in',
+          style({transform: 'translateX(200vw)', opacity: 1, }),
+          animate('500ms ease-in-out',
             style({transform: 'translateX(0)', opacity: 1})
           )
         ]),
         transition(':leave', [
-          animate('100ms ease-out',
-            style({transform: 'translateX(200px)', opacity: 0})
+          animate('500ms ease-in-out',
+            style({transform: 'translateX(200vw)', opacity: 1})
+          )
+        ])
+      ]),
+      trigger('slideLeftInOut', [
+        transition(':enter', [
+          style({transform: 'translateX(-100vw)', opacity: 1, }),
+          animate('500ms ease-in-out',
+            style({transform: 'translateX(0)', opacity: 1})
+          )
+        ]),
+        transition(':leave', [
+          animate('500ms ease-in-out',
+            style({transform: 'translateX(-200vw)', opacity: 1})
           )
         ])
       ])
@@ -52,6 +77,7 @@ export class IntroComponent {
   know_moreee = false
   know_less = true
   menu = false
+  currentAnimation = 'fade';
 
   constructor(private sanitizer: DomSanitizer, private iconRegistry: MatIconRegistry){
     iconRegistry.addSvgIconLiteral('right-arrow', sanitizer.bypassSecurityTrustHtml(RIGHT_ARROW));
@@ -67,32 +93,44 @@ export class IntroComponent {
   }
 
   right_arrow_action(){
-    this.isShifted = !this.isShifted
+    this.setAnimation('slide')    
+    setTimeout(() => {
+      this.isShifted = !this.isShifted
+    });
   }
 
   know_more_click(){
-    if(this.know_less === true){
-      this.know_less = !this.know_less
-      setTimeout(() => {
-        this.know_more = !this.know_more;
+    this.setAnimation('fade')
+    setTimeout(() => {
+      if(this.know_less === true){
+        this.know_less = !this.know_less
         setTimeout(() => {
-          this.know_moreee = !this.know_moreee
+          this.know_more = !this.know_more;
+          setTimeout(() => {
+            this.know_moreee = !this.know_moreee
+          }, 400)
         }, 400)
-      }, 400)
-    }
-    else{
-      this.know_moreee = !this.know_moreee
-      setTimeout(() => {
-        this.know_more = !this.know_more;
+      }
+      else{
+        this.know_moreee = !this.know_moreee
         setTimeout(() => {
-          this.know_less = !this.know_less
+          this.know_more = !this.know_more;
+          setTimeout(() => {
+            this.know_less = !this.know_less
+          }, 400)
         }, 400)
-      }, 400)
-    }
+      }
+    });
     
   }
 
   menu_click(){   
     this.menu = !this.menu;
+  }
+
+  setAnimation(type: string) {
+    setTimeout(() => {
+      this.currentAnimation = type;
+    });
   }
 }
