@@ -91,15 +91,18 @@
 }
 
 .right-arrow{
-    position: absolute;
-    left: 87.5vw;
-    top: 75vh;
+    // position: absolute;
+    // left: 87.5vw;
+    // top: 75vh;
     padding: 0px;
     margin: 25px;
     background-color: transparent;
     border: none;
     scale: 2;
     transition: .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .right-arrow:active{
@@ -109,8 +112,8 @@
 
 .left_arrow{
     transform: rotate(-180deg);
-    left: 7vw;
-    top: 75vh;
+    // left: 7vw;
+    // top: 75vh;
     background-color: transparent;
     border: none;
     scale: 2;
@@ -210,6 +213,35 @@
     top: 20vh;
     width: 50vw;
     color: white;
+}
+
+.left_arrow_wrapper{
+    width: 0;
+}
+
+.left_arrow_outer_wrapper{
+    width: 0;
+    position: absolute;
+    top: 75vh;
+    transform: translateX(-80%);
+    transition: .5s ease-in-out;
+}
+
+.right-arrow-outer-wrapper{
+    position: absolute;
+    top: 75vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+.right-arrow-wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85vw;
 }
 
 // .total_view_port{

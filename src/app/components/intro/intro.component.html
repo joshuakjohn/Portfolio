@@ -49,6 +49,15 @@
     </div>
 </div>
 
-<button *ngIf="know_less" class="right-arrow" (click)="right_arrow_action()" [class.left_arrow]="isShifted">
-    <mat-icon svgIcon="right-arrow"></mat-icon>
-</button>
+<div class="right-arrow-outer-wrapper" [class.left_arrow_outer_wrapper]="isShifted">
+    <div class="right-arrow-wrapper" [class.left_arrow_wrapper]="isShifted">
+        <div>
+
+        </div>
+        <div>
+            <button *ngIf="know_less" class="right-arrow" (click)="right_arrow_action()" [class.left_arrow]="isShifted">
+            <mat-icon svgIcon="right-arrow"></mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
