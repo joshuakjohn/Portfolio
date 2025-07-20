@@ -1,43 +1,90 @@
-.skill-circle{
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #968ff9;
+  box-shadow: 0 0 5px #968ff9, 0 0 15px #968ff9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: #111;
+  transition: box-shadow 0.1s;
+  float: left;
+
+  // 🔥 Add animation on load
+  animation: popIn 0.8s cubic-bezier(0.17, 0.89, 0.32, 1.49) both;;
 }
 
-.outer-circle{
-    position: relative;
-    width: 100px;
-    height: 100px;
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-svg{
-    width: 100px;
-    height: 100px;
-    transform: rotate(-90deg);
+.circle:hover {
+  box-shadow: 0 0 10px #968ff9, 0 0 20px #968ff9;
 }
 
-circle{
-    fill: none;
-    stroke-width: 10;
-    // stroke-linecap: round;
+.coin {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
 }
 
-circle:nth-child(1){
-    stroke: #25243e;
+.rotating {
+  animation: spin 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-circle:nth-child(2){
-    stroke: #968ff9;
-    stroke-dasharray: 282.6;
-    stroke-dashoffset: 282.6;
-    transition: stroke-dashoffset .5s ease-in-out;
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  60% {
+    transform: rotateY(720deg);
+  }
+  100% {
+    transform: rotateY(1080deg);
+  }
 }
 
-.icon{
-    height: 24px;
-    position: absolute;
-    top: 56%;
-    left: 56%;
-    transform: translate(-50%, -50%);
-    scale: 1.5;
+mat-icon {
+  scale: .5;
+}
+
+.container{
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inside_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
