@@ -1,35 +1,37 @@
 <div class="main" @fadeInOut>
-    <form class="mail" [formGroup]="form" (submit)="sendMail()">
+    <div class="inner_main">
+        <form class="mail" [formGroup]="form" (submit)="sendMail()">
         <div class="fullname">
             <p>Full Name</p>
             <input type="text" formControlName="from_name">
-            <div *ngIf="form.get('from_name')?.touched && form.get('from_name')?.invalid" class="error">
-                *Full Name is required.
+                <div *ngIf="form.get('from_name')?.touched && form.get('from_name')?.invalid" class="error">
+                    *Full Name is required.
+                </div>
             </div>
-        </div>
-        
-        <div class="fullname">
-            <p>E-mail</p>
-            <input type="email" formControlName="from_email">
-            <div *ngIf="form.get('from_email')?.touched && form.get('from_email')?.invalid" class="error">
-                <span *ngIf="form.get('from_email')?.errors?.['required']">*Email is required.</span>
-                <span *ngIf="form.get('from_email')?.errors?.['email']">*Enter a valid email address.</span>
+            
+            <div class="fullname">
+                <p>E-mail</p>
+                <input type="email" formControlName="from_email">
+                <div *ngIf="form.get('from_email')?.touched && form.get('from_email')?.invalid" class="error">
+                    <span *ngIf="form.get('from_email')?.errors?.['required']">*Email is required.</span>
+                    <span *ngIf="form.get('from_email')?.errors?.['email']">*Enter a valid email address.</span>
+                </div>
             </div>
-        </div>
+            
+            <div class="message">
+                <p>Message</p>
+                <textarea name="message" id="" formControlName="message"></textarea>
+                <div *ngIf="form.get('message')?.touched && form.get('message')?.invalid" class="error">
+                    *Message is required.
+                </div>
+            </div>
+            
+            <button type="submit">Send</button>
+        </form>
         
         <div class="message">
-            <p>Message</p>
-            <textarea name="message" id="" formControlName="message"></textarea>
-            <div *ngIf="form.get('message')?.touched && form.get('message')?.invalid" class="error">
-                *Message is required.
-            </div>
+            <img src="../../../assets/giphy.gif" alt="">
         </div>
-        
-        <button type="submit">Send</button>
-    </form>
-    
-    <div class="message">
-        <img src="../../../assets/giphy.gif" alt="">
     </div>
 </div>
 
