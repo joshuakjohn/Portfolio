@@ -42,7 +42,7 @@ export class SkillIconsComponent {
 
     // 🔁 Assign a random delay (0–3s) for each icon
     this.popInDelays = this.icons.map(() => {
-      const delay = Math.random() * 3;
+      const delay = (Math.random() * 2)+ 0.5; // Random delay between 0.5s and 3.5s
       return `${delay.toFixed(2)}s`; // e.g., '2.48s'
     });
   }
