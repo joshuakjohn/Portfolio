@@ -175,7 +175,7 @@
     aspect-ratio: 1 / 1;
     border: 2px solid black;
     border-radius: 50%;
-    // background-image: url("../../../assets/josh_img.png");
+    background-image: url("../../../assets/josh_img.png");
     background-size: cover;
   }
 
@@ -288,31 +288,6 @@
     scale: 1.2;
   }
 
-  .know_more_button {
-    all: unset;
-    position: absolute;
-    top: 63vh;
-    left: 35vw;
-    height: 40px;
-    width: 30vw;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 1px solid;
-    border-radius: 50px;
-    border-color: #968ff9;
-    color: white;
-    background-color: transparent;
-    transition: 1s;
-  }
-
-  .profile {
-    top: 65vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50vw;
-    height: 50vw;
-  }
-
   .profile.grow {
     width: 60vw;
     height: 60vw;
@@ -340,33 +315,12 @@
     }
   }
 
-  #left_icon {
-    top: 92vh;
-    left: 47vw;
-    scale: 1.5;
-  }
-
-  .right-arrow {
-    margin: 10px;
-    scale: 1.5;
-  }
-
-  .right-arrow-wrapper {
-    width: 90vw;
-  }
-
   .right-arrow-outer-wrapper {
     display: none;
-    top: 85vh;
   }
 
   .right_viewport {
     margin-top: 50px;
-  }
-
-  #skills {
-    font-size: 30px;
-    text-align: center;
   }
 
   .icons {
@@ -387,26 +341,16 @@
 
   .profile {
     position: absolute;
-    z-index: -1;
-    top: 72vh;
-    left: 50vw;
+    top: 65vh;
+    left: 50%;
     height: 0px;
     width: 0px;
-    border: 1px solid;
-    border-radius: 50px;
-    border-color: #968ff9;
-    background-color: transparent;
-    transition: .3s;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
   }
 
     .profile.grow {
     width: 30vw;
     height: 30vw;
     top: 15vh;
-    // left: 5vw;
     border-radius: 50%;
     border: 0.4vw solid #968ff9;
   }
