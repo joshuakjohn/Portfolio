@@ -68,22 +68,22 @@
     color: #968ff9;
 }
 
-.know_more_button{
-    all: unset;
-    position: absolute;
-    top: 72vh;
-    left: 7.5vw;
-    height: 40px;
-    width: 130px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 1px solid;
-    border-radius: 50px;
-    border-color: #968ff9;
-    color: white;
-    background-color: transparent;
-    transition: 1s;
-}
+// .know_more_button{
+//     all: unset;
+//     position: absolute;
+//     top: 72vh;
+//     left: 7.5vw;
+//     height: 40px;
+//     width: 130px;
+//     text-align: center;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     border: 1px solid;
+//     border-radius: 50px;
+//     border-color: #968ff9;
+//     color: white;
+//     background-color: transparent;
+//     transition: 1s;
+// }
 
 .know_more_butto{
     display: none;
@@ -214,34 +214,34 @@
     color: white;
 }
 
-.left_arrow_wrapper{
-    width: 0;
-}
+// .left_arrow_wrapper{
+//     width: 0;
+// }
 
-.left_arrow_outer_wrapper{
-    width: 0;
-    position: absolute;
-    top: 75vh;
-    transform: translateX(-80%);
-    transition: .5s ease-in-out;
-}
+// .left_arrow_outer_wrapper{
+//     width: 0;
+//     position: absolute;
+//     top: 75vh;
+//     transform: translateX(-80%);
+//     transition: .5s ease-in-out;
+// }
 
-.right-arrow-outer-wrapper{
-    position: absolute;
-    top: 75vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    transition: .5s ease-in-out;
-}
+// .right-arrow-outer-wrapper{
+//     position: absolute;
+//     top: 75vh;
+//     width: 100vw;
+//     display: flex;
+//     justify-content: center;
+//     transition: .5s ease-in-out;
+// }
 
-.right-arrow-wrapper{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85vw;
-}
+// .right-arrow-wrapper{
+//     position: absolute;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 85vw;
+// }
 
 @media (max-width: 768px) {
   .intro_wrapper {
@@ -317,10 +317,6 @@
 
   .right-arrow-outer-wrapper {
     display: none;
-  }
-
-  .right_viewport {
-    margin-top: 50px;
   }
 
   .icons {
