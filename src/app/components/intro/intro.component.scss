@@ -96,9 +96,6 @@
 }
 
 .right-arrow{
-    // position: absolute;
-    // left: 87.5vw;
-    // top: 75vh;
     padding: 0px;
     margin: 25px;
     background-color: transparent;
@@ -117,8 +114,6 @@
 
 .left_arrow{
     transform: rotate(-180deg);
-    // left: 7vw;
-    // top: 75vh;
     background-color: transparent;
     border: none;
     scale: 2;
@@ -135,7 +130,6 @@
     display: flex;
     justify-content: center;
     color: white;
-    // margin-top: 100px;
 }
 
 .right_content{
@@ -147,7 +141,6 @@
 
 .icons{
     display: flex;
-    // justify-content: center;
     align-items: center;
 }
 
@@ -250,58 +243,9 @@
     width: 85vw;
 }
 
-// .total_view_port{
-//     display: flex;
-//     justify-content: space-between;
-//     width: 200vw;
-//     height: 100vh;
-//     transition: transform 0.5s ease-in-out;
-// }
-
-// .shifted {
-//     transform: translateX(-100vw);
-//   }
-
-
-
-
-
-// .left_viewport{
-//     width: 50%;
-//     height: 100%;
-//     margin-top: 170px;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .inside-right-arrow-div{
-//     display: flex;
-//     justify-content: space-between;
-//     width: 85vw;
-// }
-
-// .right-arrow-div{
-//     display: flex;
-//     justify-content: center;
-// }
-
-
 @media (max-width: 768px) {
   .intro_wrapper {
     top: 30vh;
-    // flex-direction: column;
-    // align-items: center;
-    // padding: 0 5vw;
   }
 
   .intro {
@@ -331,7 +275,6 @@
   }
 
   .name {
-    // flex-direction: column;
     gap: 10px;
   }
 
