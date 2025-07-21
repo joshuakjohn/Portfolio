@@ -1,8 +1,10 @@
+import { HammerModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import * as Hammer from 'hammerjs';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +16,12 @@ import { ContactComponent } from './components/contact/contact.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CareerComponent } from './components/career/career.component';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  override overrides = {
+    swipe: { direction: Hammer.DIRECTION_ALL }, // Enable all swipe directions
+  };
+}
 
 @NgModule({
   declarations: [
@@ -31,9 +39,15 @@ import { CareerComponent } from './components/career/career.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HammerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

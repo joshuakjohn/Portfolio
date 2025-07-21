@@ -1,4 +1,4 @@
-<div class="intro_wrapper" *ngIf="!isShifted && know_less" [@combinedAnimation]="currentAnimation">
+<div class="intro_wrapper" (swipeleft)="right_arrow_action()" *ngIf="!isShifted && know_less" [@combinedAnimation]="currentAnimation">
     <div class="intro">
         <div class="welcome">
             <h2 id="hey">Hey Buddy,</h2>
@@ -37,7 +37,7 @@
     </div>
 </div>
     
-<div *ngIf="isShifted" @slideRightInOut class="right_viewport">
+<div *ngIf="isShifted" @slideRightInOut class="right_viewport" (swiperight)="right_arrow_action()">
     <div class="right_content">
         <h1 id="skills">Skills</h1>
         <div class="icons">
@@ -58,4 +58,8 @@
             </button>
         </div>
     </div>
+</div>
+
+<div class="swiper" (swipeleft)="right_arrow_action()" (swiperight)="right_arrow_action()">
+
 </div>

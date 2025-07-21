@@ -157,3 +157,31 @@
    .link:active{
     scale: .98;
    }
+
+   @media (max-width: 768px) {
+
+    #logo{
+      display: none;
+    }
+
+    .menu_icon{
+      display: none;
+    }
+
+    .mobile_menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      color: white;
+      margin-top: 50px;
+
+    }
+
+    .inside_menu{
+      display: flex;
+      gap: 50px;
+    }
+
+   }

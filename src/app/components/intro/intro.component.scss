@@ -289,3 +289,151 @@
 //     display: flex;
 //     justify-content: center;
 // }
+
+
+@media (max-width: 768px) {
+  .intro_wrapper {
+    top: 30vh;
+    // flex-direction: column;
+    // align-items: center;
+    // padding: 0 5vw;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .welcome {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #hey {
+    font-size: 16px;
+  }
+
+  #im, #name {
+    font-size: 60px;
+  }
+
+  #message {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .name {
+    // flex-direction: column;
+    gap: 10px;
+  }
+
+  .link_icons {
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .svg_link {
+    scale: 1.2;
+  }
+
+  .know_more_button {
+    all: unset;
+    position: absolute;
+    top: 63vh;
+    left: 35vw;
+    height: 40px;
+    width: 30vw;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid;
+    border-radius: 50px;
+    border-color: #968ff9;
+    color: white;
+    background-color: transparent;
+    transition: 1s;
+  }
+
+  .profile {
+    top: 65vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .profile.grow {
+    width: 60vw;
+    height: 60vw;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .inner {
+    width: 94%;
+  }
+
+  .info {
+    top: 70vh;
+    left: 5vw;
+    width: 90vw;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  #left_icon {
+    top: 60vh;
+    left: 10vw;
+    scale: 1.5;
+  }
+
+  .right-arrow {
+    margin: 10px;
+    scale: 1.5;
+  }
+
+  .right-arrow-wrapper {
+    width: 90vw;
+  }
+
+  .right-arrow-outer-wrapper {
+    display: none;
+    top: 85vh;
+  }
+
+  .right_viewport {
+    margin-top: 50px;
+  }
+
+  #skills {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .left_arrow_outer_wrapper {
+    top: 85vh;
+  }
+
+  .swiper {
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+}
