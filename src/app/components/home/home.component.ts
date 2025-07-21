@@ -27,8 +27,12 @@ export class HomeComponent {
 
   }
 
-  menu_click(){   
-    this.menu = !this.menu;
+  menu_click(choise: string) {  
+    if(choise === 'outer'){
+      this.menu = false
+    } else{
+      this.menu = !this.menu;
+    }
   }
 
   navigate(url: string){

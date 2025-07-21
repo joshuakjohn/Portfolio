@@ -1,7 +1,4 @@
 <div class="main" @fadeInOut>
-    <div class="message">
-        <img src="../../../assets/giphy.gif" alt="">
-    </div>
     <form class="mail" [formGroup]="form" (submit)="sendMail()">
         <div class="fullname">
             <p>Full Name</p>
@@ -31,5 +28,8 @@
         <button type="submit">Send</button>
     </form>
     
+    <div class="message">
+        <img src="../../../assets/giphy.gif" alt="">
+    </div>
 </div>
 

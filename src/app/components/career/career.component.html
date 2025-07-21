@@ -1,1 +1,92 @@
-<p>career works!</p>
+<div class="container" @fadeInOut>
+
+    <div class="rectangle" (click)="toggleExpansion('wip')">
+        <div class="header">
+            <h1 [@headingMargin]="expanded_wip ? 'expanded' : 'collapsed'">Java Full Stack Developer</h1>
+            <h1 [@headingMargin]="expanded_wip ? 'expanded' : 'collapsed'">2025 - Present</h1>
+        </div>
+        <div [@expandCollapse]="expanded_wip ? 'expanded' : 'collapsed'">
+            <div class="sub">
+            <mat-icon> business</mat-icon>
+            <p>Wipro Ltd</p>
+            </div>
+            <div class="sub1">
+                <div class="sub">
+                    <mat-icon>room</mat-icon>
+                    <p>Chennai</p>
+                </div>
+            </div>
+            <div class="sub">
+                <mat-icon>build</mat-icon>
+                <p>Tech --> Java | Javascript | Typescript | Spring Boot | Angular</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="rectangle" (click)="toggleExpansion('bl')">
+        <div class="header">
+            <h1 [@headingMargin]="expanded_bl ? 'expanded' : 'collapsed'">MEAN Stack Developer Intern</h1>
+            <h1 [@headingMargin]="expanded_bl ? 'expanded' : 'collapsed'">2024- 2025</h1>
+        </div>
+        <div [@expandCollapse]="expanded_bl ? 'expanded' : 'collapsed'">
+            <div class="sub">
+            <mat-icon> business</mat-icon>
+            <p>BridgeLabz Solutions</p>
+            </div>
+            <div class="sub1">
+                <div class="sub">
+                    <mat-icon>room</mat-icon>
+                    <p>Bengaluru</p>
+                </div>
+            </div>
+            <div class="sub">
+                <mat-icon>build</mat-icon>
+                <p>Tech --> Node | Express | Angular | MongoDB | Javascript | Typescript</p>
+            </div>
+        </div>
+    </div>
+
+        <div class="rectangle" (click)="toggleExpansion('jsp')">
+        <div class="header">
+            <h1 [@headingMargin]="expanded_jsp ? 'expanded' : 'collapsed'">Java Full Stack Developer Trainee</h1>
+            <h1 [@headingMargin]="expanded_jsp ? 'expanded' : 'collapsed'">2024</h1>
+        </div>
+        <div [@expandCollapse]="expanded_jsp ? 'expanded' : 'collapsed'">
+            <div class="sub">
+            <mat-icon> business</mat-icon>
+            <p>JSpiders</p>
+            </div>
+            <div class="sub1">
+                <div class="sub">
+                    <mat-icon>room</mat-icon>
+                    <p>Bengaluru</p>
+                </div>
+            </div>
+            <div class="sub">
+                <mat-icon>build</mat-icon>
+                <p>Tech --> Java | HTML | CSS | Javascript | SQL</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="rectangle" (click)="toggleExpansion('clg')">
+        <div class="header">
+            <h1 [@headingMargin]="expanded_clg ? 'expanded' : 'collapsed'">Bachelor of Technology [CSE]</h1>
+            <h1 [@headingMargin]="expanded_clg ? 'expanded' : 'collapsed'">2020 - 2024</h1>
+        </div>
+        <div [@expandCollapse]="expanded_clg ? 'expanded' : 'collapsed'">
+            <div class="sub">
+            <mat-icon> business</mat-icon>
+            <p>APJ Abdul Kalam University</p>
+            </div>
+            <div class="sub1">
+                <div class="sub">
+                    <mat-icon>room</mat-icon>
+                    <p>Kottarakkara</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
