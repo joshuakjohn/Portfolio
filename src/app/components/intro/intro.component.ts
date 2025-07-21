@@ -93,9 +93,20 @@ export class IntroComponent {
     iconRegistry.addSvgIconLiteral('instagram', sanitizer.bypassSecurityTrustHtml(INSTAGRAM))
   }
 
+  swipeLeft(){
+    if(this.isShifted === false)
+      this.right_arrow_action();
+  }
+
+  swipeRight(){
+    if(this.isShifted === true)
+      this.right_arrow_action();
+  }
+
   right_arrow_action(){
     this.setAnimation('slide')    
     setTimeout(() => {
+      if(this.know_more === false)
       this.isShifted = !this.isShifted
     });
   }

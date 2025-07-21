@@ -1,7 +1,7 @@
 .main{
     display: flex;
     align-items: space-around;
-    margin-top: 140px;
+    margin-top: 8vh;
     color: white;
     width: 100vw;
 }
@@ -47,7 +47,7 @@ button:hover{
 
 .mail{
     margin-top: 10px;
-    margin-left: 200px;
+    margin-left: 10vw;
 }
 
 textarea{
@@ -74,3 +74,31 @@ textarea{
 .message{
     height: 150px;
 }
+
+@media (max-width: 768px) {
+
+    .mail{
+        margin: 0px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    input{
+        height: 40px;
+        background-color: #29274b;
+        color: white;
+        border: 2px solid #29274b;
+        outline: none;
+        width: 80vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    }
+
+    textarea{
+        width: 80vw;
+    }
+    
+}
+
+
