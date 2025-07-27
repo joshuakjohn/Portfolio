@@ -387,7 +387,7 @@
     display: none;
   }
 
-  .know_more_butto{
+  .know_more_mobile{
     all: unset;
     height: 40px;
     width: 130px;
@@ -399,5 +399,29 @@
     color: white;
     background-color: transparent;
     transition: 1s;
+}
+
+#swipe{
+  position: absolute;
+  color: white;
+  font-style: italic;
+  font-weight: 10;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  top: 60vh;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: blink 2s linear infinite;
+
+
+  mat-icon{
+    scale: .8;
+  }
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
 }
 }

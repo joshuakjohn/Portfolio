@@ -15,7 +15,12 @@
             <a href="https://www.linkedin.com/in/joshuakjohn" target="_blank"><mat-icon svgIcon="linkedin" class="svg_link"></mat-icon></a>
             <a href="https://www.instagram.com/joshua_k_john" target="_blank"><mat-icon svgIcon="instagram" class="svg_link"></mat-icon></a>
         </div>
-        <button class="know_more_butto" *ngIf="know_less && !isShifted" (click)="know_more_click()" [@combinedAnimation]="currentAnimation">About me</button>
+        <button class="know_more_mobile" *ngIf="know_less && !isShifted" (click)="know_more_click()" [@combinedAnimation]="currentAnimation">About me</button>
+        <div id="swipe">
+            <mat-icon>arrow_back</mat-icon>
+            <p>swipe</p>
+        </div>
+
     </div> 
 </div>   
 
