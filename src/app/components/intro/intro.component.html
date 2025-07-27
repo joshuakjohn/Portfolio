@@ -30,7 +30,7 @@
         <mat-icon @slideInOut id="left_icon" svgIcon="right-arrow" *ngIf="know_moreee" (click)="know_more_click()"></mat-icon>
      </div>
     
-    <div class="info" *ngIf="know_moreee" [@combinedAnimation]="'fade'" (swipedown)="know_more_click()">
+    <div class="info" *ngIf="know_moreee" [@combinedAnimation]="'fade'" (swipedown)="swipeDown()">
         <div class="info_content">
             <h1>Joshua K John</h1>
             <p id="about">👋 Hi, I'm [Your Name], a passionate Software Developer from Kerala, India. I specialize in building robust and scalable web applications using the MEAN stack (MongoDB, Express.js, Angular, Node.js).<br><br>
@@ -63,6 +63,6 @@
     </div>
 </div>
 
-<div class="swiper" (swipeleft)="swipeLeft()" (swiperight)="swipeRight()" (swipedown)="know_more_click()">
+<div class="swiper" (swipeleft)="swipeLeft()" (swiperight)="swipeRight()" (swipedown)="swipeDown()">
 
 </div>

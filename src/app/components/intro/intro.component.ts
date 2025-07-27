@@ -103,6 +103,11 @@ export class IntroComponent {
       this.right_arrow_action();
   }
 
+  swipeDown(){
+    if(this.know_more === true)
+      this.know_more_click()
+  }
+
   right_arrow_action(){
     this.setAnimation('slide')    
     setTimeout(() => {
