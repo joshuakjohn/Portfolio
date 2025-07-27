@@ -88,3 +88,16 @@ p {
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+
+.circle {
+  width: 50px;
+  height: 50px;
+}
+
+.container{
+    width: 90vw;
+}
+
+}
