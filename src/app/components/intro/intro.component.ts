@@ -57,6 +57,19 @@ import { ANGULAR, EXPRESS, GITHUB, INSTAGRAM, JAVASCRIPT, LINKEDIN, MONGODB, NOD
           )
         ])
       ]),
+      trigger('slideDownInOut', [
+        transition(':enter', [
+          style({transform: 'translateY(200vw)', opacity: 1, }),
+          animate('500ms ease-in-out',
+            style({transform: 'translateY(0)', opacity: 1})
+          )
+        ]),
+        transition(':leave', [
+          animate('500ms ease-in-out',
+            style({transform: 'translateY(200vw)', opacity: 1})
+          )
+        ])
+      ]),
       trigger('slideLeftInOut', [
         transition(':enter', [
           style({transform: 'translateX(-100vw)', opacity: 1, }),

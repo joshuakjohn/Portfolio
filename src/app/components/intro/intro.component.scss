@@ -85,7 +85,7 @@
     transition: 1s;
 }
 
-.know_more_butto{
+.know_more_mobile{
     display: none;
 }
 
@@ -243,9 +243,45 @@
     width: 85vw;
 }
 
+#swipe{
+  display: none;
+}
+
+#about_mobile{
+    display: none;
+}
+
 @media (max-width: 768px) {
   .intro_wrapper {
     top: 30vh;
+  }
+
+  // .profile.grow {
+  //   width: 20px;
+  //   height: 20px;
+  //   top: 20vh;
+  //   left: 5vw;
+  //   border-radius: 50%;
+  //   border: 0.4vw solid #968ff9;
+  // }
+
+  // .inner {
+  //   width: 96px;
+  //   aspect-ratio: 1 / 1;
+  //   border: 2px solid black;
+  //   border-radius: 50%;
+  //   background-image: url("../../../assets/josh_img.png");
+  //   background-size: cover;
+  // }
+
+  #about{
+    display: none;
+  }
+
+  #about_mobile{
+    display: block;
+    line-height: 30px;
+    color: white;
   }
 
   .intro {
@@ -344,11 +380,11 @@
   }
 
     .profile.grow {
-    width: 30vw;
-    height: 30vw;
+    width: 125px;
+    height: 125px;
     top: 15vh;
     border-radius: 50%;
-    border: 0.4vw solid #968ff9;
+    border: 2px solid #968ff9;
   }
 
   .imageandicon{
@@ -406,22 +442,70 @@
   color: white;
   font-style: italic;
   font-weight: 10;
+  font-size: 15px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   top: 60vh;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   animation: blink 2s linear infinite;
 
 
   mat-icon{
-    scale: .8;
+    scale: .7;
+  }
+}
+
+#swipeRight{
+  position: absolute;
+  width: 100vw;
+  font-size: 15px;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-weight: 10;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  top: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  animation: blink 2s linear 1s infinite;
+
+  mat-icon{
+    scale: .7;
+    transform: rotate(180deg);
+  }
+}
+
+#swipeDown{
+  position: absolute;
+  width: 100vw;
+  font-size: 15px;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-weight: 10;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  top: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  animation: blink 2s linear 1s infinite;
+
+  mat-icon{
+    scale: .7;
+    transform: rotate(270deg);
+  }
+
+  p{
+    margin: 0;
   }
 }
 
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+  50% { opacity: 0.5; }
 }
 }
