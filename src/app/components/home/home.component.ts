@@ -22,9 +22,16 @@ import { Navigation, Router } from '@angular/router';
 export class HomeComponent {
 
   menu = false
+  currectRoute: string = '';
 
   constructor(private router: Router){
 
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe(() => {
+        this.currectRoute = this.router.url;
+    });
   }
 
   menu_click(choise: string) {  

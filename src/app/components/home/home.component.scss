@@ -158,6 +158,10 @@
     scale: .98;
    }
 
+   .mobile_menu{
+    display: none;
+   }
+
    @media (max-width: 768px) {
 
     #logo{
@@ -175,13 +179,38 @@
       gap: 20px;
       width: 100%;
       color: white;
-      margin-top: 30px;
+      margin-top: 20px;
 
     }
 
     .inside_menu{
       display: flex;
       gap: 50px;
+      font-size: 20px;
+    }
+
+    mat-button-toggle{
+      width: 100px;
+      color: white;
+      background-color: transparent;
+      border-color: transparent !important
+    }
+
+    mat-button-toggle.mat-button-toggle-checked {
+      // border-color: #968ff9 !important;
+      color: white;
+      background-color: #968ff93f !important;
+    }
+
+    mat-button-toggle-group{
+      border-bottom: .5px solid #5a5694;
+      border-top: .5px solid #5a5694;
+      border-left: none;
+      border-right: none;
+      border-radius: 0px;
+
+
+      // border-color: transparent;
     }
 
    }

@@ -5,7 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import * as Hammer from 'hammerjs';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     CareerComponent
   ],
   imports: [
+    MatButtonToggleModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
