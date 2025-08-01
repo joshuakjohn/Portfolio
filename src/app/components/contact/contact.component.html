@@ -25,8 +25,10 @@
                     *Message is required.
                 </div>
             </div>
-            
-            <button type="submit">Send</button>
+            <div class="send">
+                <button type="submit" [class.loading]="buttonClicked">Send</button>
+                <p *ngIf="buttonClicked">Sending...</p>
+            </div>
         </form>
         
         <div class="img">

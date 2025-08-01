@@ -23,6 +23,8 @@ import emailjs from '@emailjs/browser';
 
 export class ContactComponent {
 
+  buttonClicked: boolean = false;
+
   constructor(private fb: FormBuilder){
 
   }
@@ -34,21 +36,24 @@ export class ContactComponent {
   })
 
   async sendMail(){
-    if(this.form.valid){
-      emailjs.init('QKyZDj3rDh6wJinl1')
-      let response = await emailjs.send("service_ya5yob6","template_5axg5gg",{
-      title: "Message from portfolio",
-      name: this.form.value.from_name,
-      from: this.form.value.from_email,
-      message: this.form.value.message,
-      });
+    if(this.buttonClicked === false){
+      this.buttonClicked = true;
+      if(this.form.valid){
+        emailjs.init('QKyZDj3rDh6wJinl1')
+        let response = await emailjs.send("service_ya5yob6","template_5axg5gg",{
+        title: "Message from portfolio",
+        name: this.form.value.from_name,
+        from: this.form.value.from_email,
+        message: this.form.value.message,
+        });
 
-      alert("Message has been sent")
-      this.form.reset()
-    } else {
-      this.form.markAllAsTouched();
+        alert("Message has been sent")
+        this.form.reset()
+      } else {
+        this.form.markAllAsTouched();
+      }
     }
-    
+    this.buttonClicked = false;
   }
 
 }

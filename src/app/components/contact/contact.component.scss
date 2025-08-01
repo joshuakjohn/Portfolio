@@ -28,7 +28,6 @@ input{
 }
 
 button{
-    margin-top: 30px;
     height: 40px;
     width: 130px;
     text-align: center;
@@ -37,12 +36,37 @@ button{
     border-color: #968ff9;
     color: white;
     background-color: transparent;
-    transition: 1s;
+    // transition: 1s;
+}
+
+button.loading {
+  pointer-events: none;
 }
 
 button:hover{
-    transition: 1s;
+    // transition: 1s;
     background-color: #29274b;
+}
+
+button:active{
+    background-color: #968ff9;
+}
+
+.send{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+
+    p{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        animation: blink 1s linear infinite;
+    }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .mail{
@@ -76,6 +100,14 @@ textarea{
 }
 
 @media (max-width: 768px) {
+
+    button:hover{
+        background-color: transparent;
+    }
+
+    button:active{
+        background-color: #968ff9;
+    }
 
     .main{
         margin-top: 8vh;
