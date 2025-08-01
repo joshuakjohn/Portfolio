@@ -1,13 +1,13 @@
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 3px solid #968ff9;
   box-shadow: 0 0 5px #968ff9, 0 0 15px #968ff9;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 30px 30px 20px 30px;
   background-color: #111;
   transition: box-shadow 0.1s;
   float: left;
@@ -72,12 +72,13 @@ mat-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 p {
   padding: 0;
   margin: 0;
-  font-size: 13px;
+  font-size: 17px;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: 3.5s;
@@ -91,13 +92,22 @@ p {
 
 @media (max-width: 768px) {
 
-.circle {
-  width: 50px;
-  height: 50px;
+  .container{
+    width: 90vw;
 }
 
-.container{
-    width: 90vw;
+.inside_container{
+    margin-bottom: 10px;
+}
+
+p{
+  font-size: 12px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  margin: 20px;
 }
 
 }
