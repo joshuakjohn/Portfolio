@@ -123,14 +123,16 @@
 #skills{
     color: white;
     font-size: 50px;
+    margin-top: 0px;
 }
 
 .right_viewport{
     width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     color: white;
-    margin-top: 15vh;
 }
 
 .right_content{
@@ -275,8 +277,18 @@
   //   background-size: cover;
   // }
 
+  #skills{
+    color: white;
+    font-size: 50px;
+    margin-top: 34px;
+  }
+
   .right_viewport{
-    margin-top: 0px;
+    all: unset;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: white;
   }
 
   #about{
