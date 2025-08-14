@@ -163,5 +163,4 @@ export class IntroComponent {
       this.currentAnimation = type;
     });
   }
-  //temp
 }
