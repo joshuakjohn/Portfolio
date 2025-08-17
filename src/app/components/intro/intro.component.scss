@@ -70,8 +70,9 @@
 
 .know_more_button{
     all: unset;
+    z-index: 10;
     position: absolute;
-    top: 72vh;
+    top: 75vh;
     left: 7.5vw;
     height: 40px;
     width: 130px;
@@ -151,7 +152,7 @@
 .profile {
     position: absolute;
     z-index: -1;
-    top: 72vh;
+    top: 75vh;
     left: 7.5vw;
     height: 40px;
     width: 130px;
