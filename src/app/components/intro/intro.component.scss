@@ -128,11 +128,12 @@
 
 .right_viewport{
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     color: white;
+    margin-top: 15vh;
 }
 
 .right_content{
@@ -446,7 +447,7 @@
   font-weight: 10;
   font-size: 15px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  top: 60dvh;
+  top: 64dvh;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -455,6 +456,8 @@
 
   mat-icon{
     scale: .7;
+    margin-top: 3px;
+    transform: rotate(180deg);
   }
 }
 
@@ -475,7 +478,7 @@
 
   mat-icon{
     scale: .7;
-    transform: rotate(180deg);
+    margin-top: 3px;
   }
 }
 

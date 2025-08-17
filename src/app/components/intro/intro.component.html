@@ -17,8 +17,8 @@
         </div>
         <button class="know_more_mobile" *ngIf="know_less && !isShifted" (click)="know_more_click()" [@combinedAnimation]="currentAnimation">About me</button>
         <div id="swipe">
-            <mat-icon>arrow_back</mat-icon>
             <p>swipe</p>
+            <mat-icon>arrow_back</mat-icon>
         </div>
 
     </div> 
@@ -62,9 +62,9 @@
     </div>
 
 </div>
-<div @slideRightInOut id="swipeRight" *ngIf="isShifted">
-    <p>swipe</p>
+<div @slideRightInOut id="swipeRight" (swiperight)="swipeRight()" *ngIf="isShifted">
     <mat-icon>arrow_back</mat-icon>
+    <p>swipe</p>
 </div>
 
 
